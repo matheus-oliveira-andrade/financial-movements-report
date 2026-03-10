@@ -27,7 +27,7 @@ Logs of all applications are available in kibana exposed in [`localhost:9001`](l
 
 ### Technologies
 
-- `C#` was used as the language with `.net 6`, following some of the concepts of `clean architecture`. For `unit tests`, `xunit` and `moq` were used.
+- `C#` was used as the language with `.net 8`, following some of the concepts of `clean architecture`. For `unit tests`, `xunit` and `moq` were used.
 - `Docker` was used for the application containers with `docker-compose` for multi-containers.
 - `PostgreSQL` was chosen as the database.
 - `RabbitMQ` was chosen as the message broker.
