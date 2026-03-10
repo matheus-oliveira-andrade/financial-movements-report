@@ -1,4 +1,4 @@
-# Account Movements Report
+# Financial Movements Report
 
 An event-driven pipeline that processes financial transactions and exposes a consolidated movements report per account through a REST API.
 
