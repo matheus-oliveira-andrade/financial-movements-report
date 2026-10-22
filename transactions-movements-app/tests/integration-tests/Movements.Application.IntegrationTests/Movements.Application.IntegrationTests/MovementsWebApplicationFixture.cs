@@ -4,6 +4,7 @@ using MediatR;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.AspNetCore.TestHost;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Movements.Domain.Interfaces.Data;
@@ -25,6 +26,7 @@ public class MovementsWebApplicationFixture : IAsyncLifetime
         {
             builder.ConfigureTestServices(services =>
             {
+                services.RemoveAll<IDbContextOptionsConfiguration<MovementsDbContext>>();
                 services.RemoveAll(typeof(DbContextOptions<MovementsDbContext>));
                 services.AddDbContext<MovementsDbContext>(opt =>
                 {
