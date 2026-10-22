@@ -37,7 +37,7 @@ docker-compose up -d
 
 ### Technologies
 
-- **C# / .NET 8** — both solutions follow Clean Architecture with four layers: `Domain` (entities and interfaces), `Application` (use-case orchestration via **MediatR** CQRS — commands, queries, events), `Infrastructure` (**EF Core** + **Npgsql** ORM, RabbitMQ implementations), and an entry-point project (API or console host).
+- **C# / .NET 10** — both solutions follow Clean Architecture with four layers: `Domain` (entities and interfaces), `Application` (use-case orchestration via **MediatR** CQRS — commands, queries, events), `Infrastructure` (**EF Core** + **Npgsql** ORM, RabbitMQ implementations), and an entry-point project (API or console host).
 - **RabbitMQ** — message broker using a Fanout exchange (`processed-transactions`). Published via `RabbitMQ.Client` (Seed) and consumed via **MassTransit** + **MassTransit.Newtonsoft** (Movements) with a 3-retry policy at 60-second intervals.
 - **PostgreSQL 15** — relational database for persisting movements, accessed through EF Core migrations applied automatically at startup.
 - **Docker / Docker Compose** — multi-stage container builds for each deployable binary; Compose orchestrates all services with resource limits.
